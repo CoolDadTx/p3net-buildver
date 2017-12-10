@@ -1,0 +1,69 @@
+// VERSIONINFO resource
+#include "FileVer.h"
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+#ifndef VS_FF_NOFLAGS
+#define VS_FF_NOFLAGS   0x0L
+#endif
+
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION         VER_VER_MAJOR,VER_VER_MINOR,VER_VER_PATCH,VER_VER_BUILD
+PRODUCTVERSION      VER_VER_MAJOR,VER_VER_MINOR,VER_VER_PATCH,VER_VER_BUILD
+
+FILEFLAGSMASK       VS_FFI_FILEFLAGSMASK
+
+#if defined(_DEBUG) || defined(DEBUG)
+FILEFLAGS           VS_FF_DEBUG
+#else
+FILEFLAGS           VS_FF_NOFLAGS
+#endif
+
+FILEOS              VOS__WINDOWS32
+
+#if defined(_WINDLL) || defined(AFXDLL)
+FILETYPE            VFT_DLL
+#else
+FILETYPE            VFT_APP
+#endif
+
+FILESUBTYPE         VFT2_UNKNOWN
+
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName",        VER_COMPANYNAME
+            VALUE "FileDescription",    VER_FILE_DESCRIPTION
+            VALUE "FileVersion",        VER_FILEVER_STRING
+            VALUE "InternalName",       VER_INTERNAL_NAME
+            VALUE "LegalCopyright",     VER_COPYRIGHT
+	    VALUE "LegalTrademarks",    VER_TRADEMARK
+            VALUE "OriginalFilename",   VER_FILENAME
+            VALUE "ProductName",        VER_PRODUCT
+            VALUE "ProductVersion",     VER_PRODUCTVER_STRING
+        END
+        BLOCK "040904E4"
+        BEGIN
+            VALUE "CompanyName",        VER_COMPANYNAME
+            VALUE "FileDescription",    VER_FILE_DESCRIPTION
+            VALUE "FileVersion",        VER_FILEVER_STRING
+            VALUE "InternalName",       VER_INTERNAL_NAME
+            VALUE "LegalCopyright",     VER_COPYRIGHT
+            VALUE "LegalTrademarks",    VER_TRADEMARK
+            VALUE "OriginalFilename",   VER_FILENAME
+            VALUE "ProductName",        VER_PRODUCT
+            VALUE "ProductVersion",     VER_PRODUCTVER_STRING
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC

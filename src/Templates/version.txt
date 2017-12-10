@@ -1,0 +1,16 @@
+[Company]
+Name=Taylor Software
+ShortName=Taylor
+
+[Product]
+Name=Test
+ShortName=Test
+Copyright=Copyright (c) 2001 Taylor Software
+Trademark=All Rights Reserved
+
+[Version]
+Major=1
+Minor=0
+Patch=0
+Build=4
+
